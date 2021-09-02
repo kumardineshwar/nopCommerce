@@ -2,5 +2,5 @@ resources:
 - webapp-deployment.yaml
 images:
 - name: nocommerce
-  newName: kumardineshwar/devsecops
+  newName: eu.gcr.io/devsecops-demo-324812/devsecops
   newTag: latest
