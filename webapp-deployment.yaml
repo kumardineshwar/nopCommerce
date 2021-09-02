@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nocommerce
+  name: devsecops
 spec:
   selector:
     matchLabels:
-      run: nocommerce
+      run: devsecops
   replicas: 2
   template:
     metadata:
       labels:
-        run: nocommerce
+        run: devsecops
     spec:
       containers:
-      - name: nocommerce
+      - name: devsecops
         image: eu.gcr.io/devsecops-demo-324812/devsecops
         ports:
         - containerPort: 80
