@@ -3,4 +3,4 @@ resources:
 images:
 - name: nocommerce
   newName: eu.gcr.io/devsecops-demo-324812/devsecops
-  newTag: latest
+  newTag: $GITHUB_SHA
