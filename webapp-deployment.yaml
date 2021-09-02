@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nocommerce
-        image: eu.gcr.io/devsecops-demo-324812/devsecops
+        image: eu.gcr.io/devsecops-demo-324812/devsecops:$GITHUB_SHA
         ports:
         - containerPort: 80
