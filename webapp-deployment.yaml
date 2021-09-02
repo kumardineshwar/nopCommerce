@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nocommerce
+spec:
+  selector:
+    matchLabels:
+      run: nocommerce
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: nocommerce
+    spec:
+      containers:
+      - name: nocommerce
+        image: kumardineshwar/devsecops:latest
+        ports:
+        - containerPort: 80
