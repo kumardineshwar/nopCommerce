@@ -15,14 +15,20 @@
 name: Build and Deploy to GKE
 
 on:
-  
-  push:
-    branches:
-      - developer
-  pull_request:
-    branches:
-      - developer
-  workflow_dispatch: null    
+    workflow_run:
+    workflows: ["Build_Image_Docker"]
+    branches: [developer]
+    types: 
+      - completed
+      
+      
+#  push:
+#    branches:
+#      - developer
+#  pull_request:
+#    branches:
+#      - developer
+#  workflow_dispatch: null    
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
