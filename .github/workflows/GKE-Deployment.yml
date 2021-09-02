@@ -16,7 +16,7 @@ name: Build and Deploy to GKE
 
 on:
   workflow_run:
-    workflows: ["Build_Image_Docker"]
+    workflows: ["DevSecOps"]
     branches: [developer]
     types: 
       - completed
