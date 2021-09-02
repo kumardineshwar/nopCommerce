@@ -1,0 +1,6 @@
+resources:
+- webapp-deployment.yaml
+images:
+- name: nocommerce
+  newName: kumardineshwar/devsecops
+  newTag: latest
