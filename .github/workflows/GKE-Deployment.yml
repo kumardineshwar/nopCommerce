@@ -15,9 +15,14 @@
 name: Build and Deploy to GKE
 
 on:
+  
   push:
     branches:
-    - master
+      - developer
+  pull_request:
+    branches:
+      - developer
+  workflow_dispatch: null    
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
