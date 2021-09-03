@@ -103,6 +103,16 @@ jobs:
       with:
           name: nodejs-sast-artifact
           path: ${{ github.workspace }}    
+
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Generate build number
+      uses: einaregilsson/build-number@v1 
+     
+    - name: Print generated build number
+      run: echo Build number is $BUILD_NUMBER
    
         
   Build_Image_Docker:
@@ -117,7 +127,7 @@ jobs:
         name: Build & push Docker image
         with:
           image: kumardineshwar/devsecops
-          tags: 'v1, latest'
+          tags: 'latest, ${{ BUILD_NUMBER }}'
           registry: docker.io
           dockerfile: ./Dockerfile
           username: '${{ secrets.DOCKER_USERNAME }}'
