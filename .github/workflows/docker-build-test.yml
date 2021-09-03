@@ -13,8 +13,6 @@ jobs:
   Build_Image_Docker_Test:
       name: Build-Push-Image-Docker
       runs-on: ubuntu-latest
-      needs:
-        - SAST_Scan-NodeJs
       steps:
         - name: 'Build, tag, and push image to docker.io'
           env:
