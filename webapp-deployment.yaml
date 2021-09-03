@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: nocommerce
-        image: eu.gcr.io/devsecops-demo-324812/devsecops
+        image: gcr.io/PROJECT_ID/IMAGE:TAG
         ports:
         - containerPort: 80
