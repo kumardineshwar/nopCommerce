@@ -127,7 +127,7 @@ jobs:
         name: Build & push Docker image
         with:
           image: kumardineshwar/devsecops
-          tags: 'latest, ${{ BUILD_NUMBER }}'
+          tags: 'latest, $BUILD_NUMBER'
           registry: docker.io
           dockerfile: ./Dockerfile
           username: '${{ secrets.DOCKER_USERNAME }}'
