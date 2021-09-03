@@ -8,6 +8,8 @@ name: DevSecOps
       - developer
   workflow_dispatch: null
 
+env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true 
 jobs:
 
   Auto_Code_Review:
