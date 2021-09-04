@@ -16,7 +16,7 @@ jobs:
      - name: zap-Scan
        uses: zaproxy/action-baseline@v0.4.0
        with:
-        target: http://a3f8efd59f337478381772b2084a881f-969196202.ap-southeast-2.elb.amazonaws.com
+        target: http://34.88.214.184/
      - name: artifacts
        uses: actions/upload-artifact@v2
        with:
