@@ -33,8 +33,8 @@ on:
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-  GKE_CLUSTER: devsecops-cluster    # TODO: update to cluster name
-  GKE_ZONE: europe-north1-a   # TODO: update to cluster zone
+  GKE_CLUSTER: ${{ secrets.GKE_CLUSTER }}    # TODO: update to cluster name
+  GKE_ZONE: ${{ secrets.GKE_ZONE }}   # TODO: update to cluster zone
   DEPLOYMENT_NAME: nocommerce # TODO: update to deployment name
   IMAGE: devsecops
 
