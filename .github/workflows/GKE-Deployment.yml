@@ -32,10 +32,11 @@ on:
 #  workflow_dispatch: null    
 
 env:
-  PROJECT_ID: ${{ secrets.GKE_PROJECT }}
-  GKE_CLUSTER: ${{ secrets.GKE_CLUSTER }}    # TODO: update to cluster name
-  GKE_ZONE: ${{ secrets.GKE_ZONE }}   # TODO: update to cluster zone
-  DEPLOYMENT_NAME: nocommerce # TODO: update to deployment name
+  PROJECT_ID: ${{ secrets.GKE_PROJECT }} # GKE Project Name
+  GKE_CLUSTER: ${{ secrets.GKE_CLUSTER }}    # GKE Cluster Name
+  GKE_ZONE: ${{ secrets.GKE_ZONE }}   # Default GKE deployment Zone
+  SA_ACC: ${{ secrets.GKE_SA_KEY }} # GKE Service account
+  DEPLOYMENT_NAME: nocommerce # Deployment Name
   IMAGE: devsecops
 
 jobs:
@@ -51,8 +52,8 @@ jobs:
     - uses: google-github-actions/setup-gcloud@master
       with:
         version: '290.0.1'
-        service_account_key: ${{ secrets.GKE_SA_KEY }}
-        project_id: ${{ secrets.GKE_PROJECT }}
+        service_account_key: $SA_ACC
+        project_id: $PROJECT_ID
 
     # Configure Docker to use the gcloud command-line tool as a credential
     # helper for authentication
