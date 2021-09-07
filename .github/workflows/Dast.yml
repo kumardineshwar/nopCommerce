@@ -16,7 +16,7 @@ jobs:
      - name: zap-Scan
        uses: zaproxy/action-full-scan@v0.2.0
        with:
-        target: http://34.88.214.184/
+        target: ${{ secrets.EXT_IP }}
      - name: artifacts
        uses: actions/upload-artifact@v2
        with:

@@ -3,7 +3,7 @@ from selenium.webdriver.firefox.options import Options
 import pytest
 
 
-target_url = "http://34.88.214.184/install"
+target_url = "${{ secrets.EXT_IP }}/install"
 
 print("########## Running the Selenium Script ##########")
 
