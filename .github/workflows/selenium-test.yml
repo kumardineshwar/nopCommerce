@@ -7,6 +7,8 @@ on:
 #    branches:
 #      - developer
   workflow_dispatch: null
+env:
+  target_url = "${{ secrets.EXT_IP }}/install"
 jobs:
   build:
     runs-on: ubuntu-latest
