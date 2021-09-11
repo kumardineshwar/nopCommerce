@@ -17,7 +17,7 @@ env:
 jobs:
 
   Auto_Code_Review:
-    name: Auto-Code-Review-DevSkim
+    name: Code-Review-DevSkim
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
