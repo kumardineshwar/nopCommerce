@@ -1,4 +1,4 @@
-name: Run Python Tests
+name: Run Selenium Tests
 on:
 #  push:
 #    branches:
@@ -10,7 +10,7 @@ on:
 env:
   target_url: "${{ secrets.EXT_IP }}/install"
 jobs:
-  build:
+  Build-Test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
